@@ -1,7 +1,11 @@
 import { io } from '@/plugins/sails.js';
 import { ROUTE_NAME_LOBBY, ROUTE_NAME_GAME } from '@/router';
 
-import { getPlayerPnumByUsername } from '_/utils/game-utils.js';
+// TODO Figure out how to reconsolidate this with backend
+const getPlayerPnumByUsername = (players, username) => {
+  const pNum = players.findIndex(({ username: pUsername }) => pUsername === username);
+  return pNum > -1 ? pNum : null;
+};
 
 export default {
   state: {

@@ -18,7 +18,7 @@
                       label="Game Name"
                       hide-details
                       class="mr-4"
-                      :dense="$vuetify.breakpoint.mdAndDown ? true : false"
+                      :dense="$vuetify.display.mdAndDown ? true : false"
                       data-cy="create-game-input"
                       @keyup.enter="submitNewGame"
                     />
@@ -27,7 +27,7 @@
                     <v-btn
                       :loading="creatingGame"
                       color="primary"
-                      :small="$vuetify.breakpoint.mdAndDown ? true : false"
+                      :small="$vuetify.display.mdAndDown ? true : false"
                       data-cy="create-game-btn"
                       @click="submitNewGame"
                     >
@@ -57,7 +57,7 @@
               outlined
               color="primary"
               class="mt-4"
-              :small="$vuetify.breakpoint.mdAndDown ? true : false"
+              :small="$vuetify.display.mdAndDown ? true : false"
               to="rules"
               data-cy="rules-link"
             >
@@ -67,7 +67,7 @@
               outlined
               color="secondary"
               class="mt-4"
-              :small="$vuetify.breakpoint.mdAndDown ? true : false"
+              :small="$vuetify.display.mdAndDown ? true : false"
               href="https://human-ai-interaction.github.io/cuttle-bot/"
               target="_blank"
               data-cy="ai-link"
@@ -77,7 +77,7 @@
             <v-btn
               outlined
               class="mt-4"
-              :small="$vuetify.breakpoint.mdAndDown"
+              :small="$vuetify.display.mdAndDown"
               href="https://discord.gg/9vrAZ8xGyh"
               target="_blank"
             >

@@ -6,7 +6,7 @@
           :src="require('../img/logo_head.svg')"
           class="my-1"
           contain
-          :height="$vuetify.breakpoint.smAndUp ? 64 : 32"
+          :height="$vuetify.display.smAndUp ? 64 : 32"
         />
       </v-col>
       <v-col sm="7" lg="6">
@@ -21,7 +21,7 @@
           rounded
           :disabled="!status"
           :loading="joiningGame"
-          :small="!$vuetify.breakpoint.lg"
+          :small="!$vuetify.display.lg"
           @click="subscribeToGame"
         >
           JOIN

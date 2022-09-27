@@ -256,7 +256,7 @@ export default {
       });
     },
     cardWidth() {
-      if (this.$vuetify.breakpoint.xs) {
+      if (this.$vuetify.display.xs) {
         return '100%';
       }
       switch (this.moveChoices.length) {

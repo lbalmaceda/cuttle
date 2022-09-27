@@ -1,14 +1,12 @@
-import store from '../store/store.js';
-import router from '../router/index.js';
-let _ = require('lodash');
+import sails from 'sails.io.js';
+import socketIoClient from 'socket.io-client';
+import { cloneDeep } from 'lodash';
+import store from '@/store/store.js';
+import router from '@/router.js';
 
-const { isProd } = require('../../../utils/config-utils');
+export const io = sails(socketIoClient);
 
-export const io = require('sails.io.js')(require('socket.io-client'));
-
-if (!isProd) {
-  io.sails.url = import.meta.env.VUE_APP_API_URL || 'localhost:1337';
-}
+io.sails.url = import.meta.env.VUE_APP_API_URL || 'localhost:1337';
 io.sails.useCORSRouteToGetCookie = false;
 io.sails.reconnection = true;
 // Handles socket updates of game data
@@ -129,7 +127,7 @@ io.socket.on('game', function (evData) {
 });
 
 io.socket.on('gameCreated', function (evData) {
-  const newGame = _.cloneDeep(evData);
+  const newGame = cloneDeep(evData);
   store.commit('addGameToList', newGame);
 });
 
