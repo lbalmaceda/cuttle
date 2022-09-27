@@ -28,6 +28,7 @@
     "@storybook/manager-webpack4": "6.5.12",
     "@storybook/testing-library": "0.0.13",
     "@storybook/vue": "6.5.12",
+    "@vitejs/plugin-vue": "^3.1.0",
     "cypress": "9.7.0",
     "eslint": "8.24.0",
     "eslint-config-prettier": "^8.5.0",

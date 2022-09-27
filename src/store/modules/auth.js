@@ -1,4 +1,4 @@
-import { io } from '../../plugins/sails.js';
+import { io } from '@/plugins/sails.js';
 import { ROUTE_NAME_LOBBY, ROUTE_NAME_GAME } from '@/router';
 
 import { getPlayerPnumByUsername } from '_/utils/game-utils.js';

@@ -42,9 +42,11 @@
     </v-row>
   </v-container>
 </template>
+
 <script>
-import LobbyPlayerIndicator from '../components/LobbyPlayerIndicator';
 import { mapGetters } from 'vuex';
+
+import LobbyPlayerIndicator from '@/components/LobbyPlayerIndicator.vue';
 
 export default {
   name: 'Lobby',
