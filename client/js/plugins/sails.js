@@ -7,7 +7,7 @@ const { isProd } = require('../../../utils/config-utils');
 export const io = require('sails.io.js')(require('socket.io-client'));
 
 if (!isProd) {
-  io.sails.url = process.env.VUE_APP_API_URL || 'localhost:1337';
+  io.sails.url = import.meta.env.VUE_APP_API_URL || 'localhost:1337';
 }
 io.sails.useCORSRouteToGetCookie = false;
 io.sails.reconnection = true;
