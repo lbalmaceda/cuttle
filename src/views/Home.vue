@@ -14,7 +14,7 @@
                     <v-text-field
                       v-model="newGameName"
                       :loading="creatingGame"
-                      outlined
+                      variant="outlined"
                       label="Game Name"
                       hide-details
                       class="mr-4"
@@ -54,7 +54,7 @@
           <v-col id="side-nav" cols="3">
             <img id="logo" alt="Vue logo" src="../img/logo.png" />
             <v-btn
-              outlined
+              variant="outlined"
               color="primary"
               class="mt-4"
               :small="$vuetify.display.mdAndDown ? true : false"
@@ -64,7 +64,7 @@
               Rules
             </v-btn>
             <v-btn
-              outlined
+              variant="outlined"
               color="secondary"
               class="mt-4"
               :small="$vuetify.display.mdAndDown ? true : false"
@@ -75,7 +75,7 @@
               Play with AI
             </v-btn>
             <v-btn
-              outlined
+              variant="outlined"
               class="mt-4"
               :small="$vuetify.display.mdAndDown"
               href="https://discord.gg/9vrAZ8xGyh"

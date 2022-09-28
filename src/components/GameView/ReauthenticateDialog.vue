@@ -7,7 +7,7 @@
         <!-- Login Form -->
         <v-text-field
           v-model="username"
-          outlined
+          variant="outlined"
           :dense="$vuetify.display.mdAndDown"
           label="Username"
           data-cy="username"
@@ -15,7 +15,7 @@
         />
         <v-text-field
           v-model="password"
-          outlined
+          variant="outlined"
           label="Password"
           :dense="$vuetify.display.mdAndDown"
           type="password"
