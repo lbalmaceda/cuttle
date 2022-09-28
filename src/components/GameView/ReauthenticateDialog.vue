@@ -24,7 +24,7 @@
         />
       </v-card-text>
       <v-card-actions class="d-flex justify-end">
-        <v-btn text color="primary" @click="leaveGame"> Leave Game </v-btn>
+        <v-btn color="primary" @click="leaveGame"> Leave Game </v-btn>
         <v-btn color="primary" depressed data-cy="login" @click="login"> Log In </v-btn>
       </v-card-actions>
     </v-card>
