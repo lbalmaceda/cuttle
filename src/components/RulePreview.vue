@@ -13,7 +13,7 @@
       {{ description }}
     </p>
     <div class="d-flex justify-center">
-      <v-btn :color="buttonColor" outlined @click="$emit('click', !animate)">
+      <v-btn :color="buttonColor" outlined @click="toggleAnimate">
         <v-icon :icon="buttonIcon" />
         {{ buttonText }}
       </v-btn>
@@ -41,14 +41,15 @@ export default {
       type: String,
       required: true,
     },
-    animate: {
-      type: Boolean,
-      default: false,
-    },
     icon: {
       type: String,
       default: '',
     },
+  },
+  data() {
+    return {
+      animate: false,
+    };
   },
   computed: {
     buttonText() {
@@ -59,6 +60,11 @@ export default {
     },
     buttonColor() {
       return this.animate ? 'secondary' : 'primary';
+    },
+  },
+  methods: {
+    toggleAnimate() {
+      this.animate = !this.animate;
     },
   },
 };
