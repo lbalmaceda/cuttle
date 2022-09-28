@@ -21,10 +21,10 @@
     />
     <img
       v-if="isGlasses"
-      :src="require(`../../img/cards/Glasses_${suitName}.jpg`)"
+      :src="`/img/cards/glasses-${suitName}.jpg`"
       :alt="`Glasses - $${cardName}`"
     />
-    <img v-else :src="require(`../../img/cards/card_${suit}_${rank}.png`)" :alt="cardName" />
+    <img v-else :src="`/img/cards/card-${suit}-${rank}.png`" :alt="cardName" />
   </v-card>
 </template>
 

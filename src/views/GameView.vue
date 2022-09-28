@@ -103,7 +103,7 @@
                       class="transition-all opponent-card-back-wrapper opponent-hand-card mx-2"
                     >
                       <v-card class="opponent-card-back" data-opponent-hand-card>
-                        <v-img :src="require('../img/logo_head.svg')" contain />
+                        <v-img src="/img/logo-head.svg" contain />
                       </v-card>
                     </div>
                   </transition-group>
@@ -133,7 +133,7 @@
             @click="drawCard"
           >
             <template v-if="!resolvingSeven">
-              <v-img :src="require('../img/logo_head.svg')" :width="deckLogoWidth" contain />
+              <v-img src="/img/logo-head.svg" :width="deckLogoWidth" contain />
               <v-card-actions>({{ deckLength }})</v-card-actions>
               <h1 v-if="deckLength === 0" id="empty-deck-text">PASS</h1>
             </template>
