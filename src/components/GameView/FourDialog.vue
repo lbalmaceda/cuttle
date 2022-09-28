@@ -90,6 +90,6 @@ export default {
 
 <style lang="scss" scoped>
 .is-selected {
-  border: 3px solid var(--v-theme-error);
+  border: 3px solid rgba(var(--v-theme-error));
 }
 </style>
