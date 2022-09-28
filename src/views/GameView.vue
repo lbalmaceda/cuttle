@@ -1189,7 +1189,7 @@ export default {
       position: absolute;
     }
     &.my-turn {
-      border: 4px solid var(--v-accent-base);
+      border: 4px solid var(--v-theme-accent);
     }
   }
   & #deck,
@@ -1318,7 +1318,7 @@ export default {
     border-radius: 4px;
     transition: all 1s;
     &.my-turn {
-      border: 4px solid var(--v-accent-base);
+      border: 4px solid var(--v-theme-accent);
       box-shadow: 0 15px 16px -12px rgba(0, 123, 59, 0.8), 0 24px 38px 12px rgba(0, 123, 59, 0.8),
         0 10px 50px 16px rgba(33, 150, 83, 0.8) !important;
       background: linear-gradient(0deg, rgba(253, 98, 34, 1), rgba(255, 255, 255, 0.3));
