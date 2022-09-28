@@ -4,20 +4,24 @@
       <v-row>
         <img id="logo" alt="Cuttle logo" src="../img/logo.png" height="20vh" class="mb-8" />
       </v-row>
+
       <!-- Rules -->
-      <div>
-        <h1 class="gradient-text">Rules of Cuttle</h1>
-        <p class="d-block">
-          Cuttle is a 2 player battle card game played with a standard 52-card deck of cards. It has the
-          strategic nuance of trading card games like Magic, with the elegant balance of a standard deck--and
-          you can play it for free! Test your mettle in the deepest cardgame under the sea!
-        </p>
-        <div class="d-flex justify-center">
-          <v-btn to="/" color="primary" data-cy="top-home-button">
-            {{ buttonText }}
-          </v-btn>
+      <v-row class="flex-column align-start mt-5">
+        <div>
+          <h1 class="gradient-text">Rules of Cuttle</h1>
+          <p class="d-block">
+            Cuttle is a 2 player battle card game played with a standard 52-card deck of cards. It has the
+            strategic nuance of trading card games like Magic, with the elegant balance of a standard deck--and
+            you can play it for free! Test your mettle in the deepest cardgame under the sea!
+          </p>
+          <div class="d-flex justify-center mt-5">
+            <v-btn to="/" color="primary" data-cy="top-home-button">
+              {{ buttonText }}
+            </v-btn>
+          </div>
         </div>
-      </div>
+      </v-row>
+
       <!-- Tutorial -->
       <v-row class="flex-column align-start mt-5">
         <h1 class="gradient-text">Tutorial Video</h1>
@@ -37,6 +41,7 @@
           </div>
         </div>
       </v-row>
+
       <!-- Goal -->
       <v-row class="flex-column align-start mt-5">
         <h1 class="gradient-text">Goal</h1>
@@ -46,8 +51,9 @@
           cards, and their opponent is dealt 5. The player with 5 cards goes first.
         </p>
       </v-row>
+
       <!-- Play -->
-      <v-row class="flex-column">
+      <v-row class="flex-column align-start mt-5">
         <h1 class="d-block gradient-text">Play</h1>
         <p class="d-block">On your turn you must perform exactly one of the following actions:</p>
       </v-row>
@@ -60,6 +66,7 @@
           />
         </v-col>
       </v-row>
+
       <!-- Royals -->
       <v-row class="flex-column">
         <div class="d-flex">
@@ -80,6 +87,7 @@
           />
         </v-col>
       </v-row>
+
       <!-- One-Offs -->
       <v-row>
         <div class="d-flex">
@@ -106,6 +114,7 @@
           />
         </v-col>
       </v-row>
+
       <!-- Multiplayer Variants -->
       <v-row class="d-flex flex-column mb-4">
         <h1 class="gradient-text">Multiplayer Variants</h1>
@@ -172,6 +181,7 @@
           </li>
         </ul>
       </v-row>
+
       <!-- FAQ -->
       <v-row class="d-flex flex-column mb-4">
         <h1 class="gradient-text">FAQ</h1>
@@ -239,14 +249,14 @@ export default {
             title: 'Draw',
             icon: 'cards-playing-spade-multiple',
             description: 'Take one card from the Deck. You may not draw past the 8-card hand limit',
-            staticImg: 'cuttle_board.png',
+            staticImg: '/img/game/cuttle-board.png',
             animatedImg: 'https://github.com/cuttle-cards/cuttle-assets/blob/main/assets/draw.gif?raw=true',
           },
           {
             title: 'Points',
             icon: 'numeric',
             description: 'Play a number card from your hand. Worth its rank in points, lasts until scrapped',
-            staticImg: 'cuttle_points.png',
+            staticImg: '/img/game/cuttle-points.png',
             animatedImg: 'https://github.com/cuttle-cards/cuttle-assets/blob/main/assets/points.gif?raw=true',
           },
         ],
@@ -256,7 +266,7 @@ export default {
             title: 'Scuttle',
             icon: 'skull-crossbones',
             description: 'Scrap an opponent’s point card with a bigger one from your hand',
-            staticImg: 'cuttle_scuttle.png',
+            staticImg: '/img/game/cuttle-scuttle.png',
             animatedImg:
               'https://github.com/cuttle-cards/cuttle-assets/blob/main/assets/scuttling.gif?raw=true',
           },
@@ -264,7 +274,7 @@ export default {
             title: 'Royal',
             icon: 'crown',
             description: 'Play a face card for a persistent benefit based on rank (lasts until scrapped)',
-            staticImg: 'cuttle_king.png',
+            staticImg: '/img/game/cuttle-king.png',
             animatedImg: 'https://github.com/cuttle-cards/cuttle-assets/blob/main/assets/king.gif?raw=true',
           },
         ],
@@ -274,14 +284,14 @@ export default {
             title: 'One-Off',
             icon: 'delete',
             description: 'Scrap a number card for an effect based on the rank of the card.',
-            staticImg: 'cuttle_one_off_six.png',
+            staticImg: '/img/game/cuttle-one-off-six.png',
             animatedImg: 'https://github.com/cuttle-cards/cuttle-assets/blob/main/assets/six.gif?raw=true',
           },
           {
             title: 'Glasses',
             icon: 'sunglasses',
             description: 'Play an Eight to reveal your opponent’s hand (lasts until scrapped)',
-            staticImg: 'cuttle_glasses.png',
+            staticImg: '/img/game/cuttle-glasses.png',
             animatedImg:
               'https://github.com/cuttle-cards/cuttle-assets/blob/main/assets/glasses.gif?raw=true',
           },
@@ -295,7 +305,7 @@ export default {
             icon: 'crown',
             description:
               'Reduce the number of points you need to win (21, 14, 10, 7, 5 points with 0, 1, 2, 3, 4 kings)',
-            staticImg: 'cuttle_king.png',
+            staticImg: '/img/game/cuttle-king.png',
             animatedImg: 'https://github.com/cuttle-cards/cuttle-assets/blob/main/assets/king.gif?raw=true',
           },
           {
@@ -303,7 +313,7 @@ export default {
             icon: 'crown',
             description:
               'Protects your other cards from being targeted by the effects of other cards. This protects your cards against 2’s (both effects), 9’s, and Jacks, but not scuttling.',
-            staticImg: 'cuttle_queen.png',
+            staticImg: '/img/game/cuttle-queen.png',
             animatedImg: 'https://github.com/cuttle-cards/cuttle-assets/blob/main/assets/queen.gif?raw=true',
           },
         ],
@@ -313,7 +323,7 @@ export default {
             icon: 'crown',
             description:
               'Play on an opponent’s point card to steal it. Point card returns to opponent if the jack is scrapped or if another jack is used to steal it back.',
-            staticImg: 'cuttle_jack.png',
+            staticImg: '/img/game/cuttle-jack.png',
             animatedImg: 'https://github.com/cuttle-cards/cuttle-assets/blob/main/assets/jack.gif?raw=true',
           },
         ],
@@ -325,14 +335,14 @@ export default {
             title: 'Ace',
             icon: 'delete',
             description: 'Scrap all point cards on the field',
-            staticImg: 'cuttle_one_off_ace.png',
+            staticImg: '/img/game/cuttle-one-off-ace.png',
             animatedImg: 'https://github.com/cuttle-cards/cuttle-assets/blob/main/assets/ace.gif?raw=true',
           },
           {
             title: 'Two - Effect 1',
             icon: 'delete',
             description: 'Twos have two alternative one-off effects: Counter target One-Off Effect',
-            staticImg: 'cuttle_counter.png',
+            staticImg: '/img/game/cuttle-counter.png',
             animatedImg:
               'https://github.com/cuttle-cards/cuttle-assets/blob/main/assets/counter.gif?raw=true',
           },
@@ -342,14 +352,14 @@ export default {
             title: 'Two - Effect 2',
             icon: 'delete',
             description: 'Twos have two alternative one-off effects: Scrap target Royal',
-            staticImg: 'cuttle_one_off_two.png',
+            staticImg: '/img/game/cuttle-one-off-two.png',
             animatedImg: 'https://github.com/cuttle-cards/cuttle-assets/blob/main/assets/two.gif?raw=true',
           },
           {
             title: 'Three',
             icon: 'delete',
             description: 'Choose a card in the scrap pile and put it in your hand',
-            staticImg: 'cuttle_one_off_three.png',
+            staticImg: '/img/game/cuttle-one-off-three.png',
             animatedImg: 'https://github.com/cuttle-cards/cuttle-assets/blob/main/assets/three.gif?raw=true',
           },
         ],
@@ -358,14 +368,14 @@ export default {
             title: 'Four',
             icon: 'delete',
             description: 'Your opponent discards two cards of their choice',
-            staticImg: 'cuttle_one_off_four.png',
+            staticImg: '/img/game/cuttle-one-off-four.png',
             animatedImg: 'https://github.com/cuttle-cards/cuttle-assets/blob/main/assets/four.gif?raw=true',
           },
           {
             title: 'Five',
             icon: 'delete',
             description: 'Draw two cards from the deck (Up to the 8 card hand limit)',
-            staticImg: 'cuttle_one_off_five.png',
+            staticImg: '/img/game/cuttle-one-off-five.png',
             animatedImg: 'https://github.com/cuttle-cards/cuttle-assets/blob/main/assets/five.gif?raw=true',
           },
         ],
@@ -374,14 +384,14 @@ export default {
             title: 'Six',
             icon: 'delete',
             description: 'Scrap all Royals and Glasses Eights on the field',
-            staticImg: 'cuttle_one_off_six.png',
+            staticImg: '/img/game/cuttle-one-off-six.png',
             animatedImg: 'https://github.com/cuttle-cards/cuttle-assets/blob/main/assets/six.gif?raw=true',
           },
           {
             title: 'Seven',
             icon: 'delete',
             description: 'Choose one of the top two cards from the deck and play it however you choose.',
-            staticImg: 'cuttle_one_off_seven.png',
+            staticImg: '/img/game/cuttle-one-off-seven.png',
             animatedImg: 'https://github.com/cuttle-cards/cuttle-assets/blob/main/assets/seven.gif?raw=true',
           },
         ],
@@ -391,7 +401,7 @@ export default {
             icon: 'delete',
             description:
               'Return a card from your opponent’s field to their hand. They cannot play it next turn.',
-            staticImg: 'cuttle_one_off_nine.png',
+            staticImg: '/img/game/cuttle-one-off-nine.png',
             animatedImg: 'https://github.com/cuttle-cards/cuttle-assets/blob/main/assets/nine.gif?raw=true',
           },
         ],
