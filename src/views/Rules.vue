@@ -59,7 +59,7 @@
       </v-row>
       <v-row v-for="(ruleRow, rowIndex) in rules" :key="`rule-row-${rowIndex}`" align="start" class="my-6">
         <v-col v-for="(rule, colIndex) in ruleRow" :key="rule.title" md="6" sm="12" class="my-4">
-          <rule-preview v-bind="rule" />
+          <rule-preview v-bind="rule" ref="preview" @animate="handleAnimate" />
         </v-col>
       </v-row>
 
@@ -76,7 +76,7 @@
       </v-row>
       <v-row v-for="(ruleRow, rowIndex) in royals" :key="`royal-row-${rowIndex}`" align="start" class="my-6">
         <v-col v-for="(rule, colIndex) in ruleRow" :key="rule.title" md="6" sm="12" class="my-4">
-          <rule-preview v-bind="rule" />
+          <rule-preview v-bind="rule" ref="preview" @animate="handleAnimate" />
         </v-col>
       </v-row>
 
@@ -99,7 +99,7 @@
         class="my-6"
       >
         <v-col v-for="(rule, colIndex) in ruleRow" :key="rule.title" md="6" sm="12" class="my-4">
-          <rule-preview v-bind="rule" />
+          <rule-preview v-bind="rule" ref="preview" @animate="handleAnimate" />
         </v-col>
       </v-row>
 
@@ -395,6 +395,16 @@ export default {
         return 'Find a Game';
       }
       return 'Sign Up to Play Online';
+    },
+  },
+  methods: {
+    handleAnimate(cmp) {
+      const { animate } = cmp;
+      // reset other previews if we're currently animating
+      if (!animate) {
+        return;
+      }
+      this.$refs.preview.filter(c => c !== cmp).forEach(c => c.animate = false);
     },
   },
 };
