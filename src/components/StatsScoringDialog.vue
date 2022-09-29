@@ -1,8 +1,8 @@
 <template>
   <v-dialog v-model="show">
     <!-- Activator -->
-    <template #activator="{ on, attrs }">
-      <v-btn color="primary" text class="mb-2" v-bind="attrs" v-on="on">
+    <template #activator="{ props }">
+      <v-btn color="primary" text class="mb-2" v-bind="props">
         How are ranks determined?
         <v-icon class="ml-1" icon="mdi-information-outline" />
       </v-btn>

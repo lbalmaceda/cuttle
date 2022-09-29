@@ -1,16 +1,15 @@
 <template>
   <v-menu v-if="points" v-model="showMenu" top>
-    <template #activator="{ on, attrs }">
+    <template #activator="{ props }">
       <v-chip
         :color="colorForScore"
         :outlined="outlined"
         class="pointer"
         v-bind="{
-          ...attrs,
+          ...props,
           ...dataAttribute,
         }"
         dark
-        v-on="on"
       >
         {{ chipText }}
       </v-chip>
