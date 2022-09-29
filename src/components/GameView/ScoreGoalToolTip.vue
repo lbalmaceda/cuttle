@@ -2,15 +2,14 @@
   <span>
     <span class="ml-4" :data-cy="dataCyName"> GOAL: {{ pointsToWin }} </span>
     <v-menu :top="isPlayer" :bottom="!isPlayer" offset-y>
-      <template #activator="{ on, attrs }">
+      <template #activator="{ props }">
         <v-btn
           variant="plain"
           density="compact"
           class="mb-2"
           x-small
           icon
-          v-bind="attrs"
-          v-on="on">
+          v-bind="props">
           <v-icon color="white" icon="mdi-information" small />
         </v-btn>
       </template>
